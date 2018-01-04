@@ -57,10 +57,12 @@ class MDCFormFieldFoundation extends MDCFoundation {
       () => this.handleClick_());
   }
 
+  /** @inheritDoc */
   init() {
     this.adapter_.registerInteractionHandler('click', this.clickHandler_);
   }
 
+  /** @inheritDoc */
   destroy() {
     this.adapter_.deregisterInteractionHandler('click', this.clickHandler_);
   }

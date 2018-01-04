@@ -129,9 +129,6 @@ class MDCRippleFoundation extends MDCFoundation {
     this.activationState_ = this.defaultActivationState_();
 
     /** @private {number} */
-    this.xfDuration_ = 0;
-
-    /** @private {number} */
     this.initialSize_ = 0;
 
     /** @private {number} */
@@ -213,6 +210,7 @@ class MDCRippleFoundation extends MDCFoundation {
     };
   }
 
+  /** @inheritDoc */
   init() {
     if (!this.isSupported_()) {
       return;
@@ -440,6 +438,7 @@ class MDCRippleFoundation extends MDCFoundation {
     }
   }
 
+  /** @inheritDoc */
   destroy() {
     if (!this.isSupported_()) {
       return;
@@ -497,7 +496,6 @@ class MDCRippleFoundation extends MDCFoundation {
     // Diameter of the surface + 10px
     this.maxRadius_ = surfaceDiameter + MDCRippleFoundation.numbers.PADDING;
     this.fgScale_ = this.maxRadius_ / this.initialSize_;
-    this.xfDuration_ = 1000 * Math.sqrt(this.maxRadius_ / 1024);
     this.updateLayoutCssVars_();
   }
 

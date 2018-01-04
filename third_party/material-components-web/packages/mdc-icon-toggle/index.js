@@ -72,12 +72,13 @@ class MDCIconToggle extends MDCComponent {
     return new MDCRipple(this.root_, foundation);
   }
 
+  /** @inheritDoc */
   destroy() {
     this.ripple_.destroy();
     super.destroy();
   }
 
-  /** @return {!MDCIconToggleFoundation} */
+  /** @override @return {!MDCIconToggleFoundation} */
   getDefaultFoundation() {
     return new MDCIconToggleFoundation({
       addClass: (className) => this.iconEl_.classList.add(className),
@@ -94,6 +95,7 @@ class MDCIconToggle extends MDCComponent {
     });
   }
 
+  /** @inheritDoc */
   initialSyncWithDOM() {
     this.on = this.root_.getAttribute(MDCIconToggleFoundation.strings.ARIA_PRESSED) === 'true';
     this.disabled = this.root_.getAttribute(MDCIconToggleFoundation.strings.ARIA_DISABLED) === 'true';

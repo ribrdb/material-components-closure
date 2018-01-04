@@ -105,11 +105,12 @@ class MDCRipple extends MDCComponent {
     this.foundation_.layout();
   }
 
-  /** @return {!MDCRippleFoundation} */
+  /** @override @return {!MDCRippleFoundation} */
   getDefaultFoundation() {
     return new MDCRippleFoundation(MDCRipple.createAdapter(this));
   }
 
+  /** @inheritDoc */
   initialSyncWithDOM() {
     this.unbounded = 'mdcRippleIsUnbounded' in this.root_.dataset;
   }

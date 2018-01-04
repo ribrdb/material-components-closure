@@ -59,12 +59,14 @@ class MDCTextFieldIconFoundation extends MDCFoundation {
     this.interactionHandler_ = (evt) => this.handleInteraction(evt);
   }
 
+  /** @inheritDoc */
   init() {
     ['click', 'keydown'].forEach((evtType) => {
       this.adapter_.registerInteractionHandler(evtType, this.interactionHandler_);
     });
   }
 
+  /** @inheritDoc */
   destroy() {
     ['click', 'keydown'].forEach((evtType) => {
       this.adapter_.deregisterInteractionHandler(evtType, this.interactionHandler_);

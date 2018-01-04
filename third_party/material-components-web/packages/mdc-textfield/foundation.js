@@ -110,6 +110,7 @@ class MDCTextFieldFoundation extends MDCFoundation {
     this.bottomLineAnimationEndHandler_ = () => this.handleBottomLineAnimationEnd();
   }
 
+  /** @inheritDoc */
   init() {
     this.adapter_.addClass(MDCTextFieldFoundation.cssClasses.UPGRADED);
     // Ensure label does not collide with any pre-filled value.
@@ -130,6 +131,7 @@ class MDCTextFieldFoundation extends MDCFoundation {
       MDCTextFieldBottomLineFoundation.strings.ANIMATION_END_EVENT, this.bottomLineAnimationEndHandler_);
   }
 
+  /** @inheritDoc */
   destroy() {
     this.adapter_.removeClass(MDCTextFieldFoundation.cssClasses.UPGRADED);
     this.adapter_.deregisterInputInteractionHandler('focus', this.inputFocusHandler_);

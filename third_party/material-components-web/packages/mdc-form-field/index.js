@@ -61,7 +61,7 @@ class MDCFormField extends MDCComponent {
     return /** @type {!Element} */ (this.root_.querySelector(LABEL_SELECTOR));
   }
 
-  /** @return {!MDCFormFieldFoundation} */
+  /** @override @return {!MDCFormFieldFoundation} */
   getDefaultFoundation() {
     return new MDCFormFieldFoundation({
       registerInteractionHandler: (type, handler) => this.label_.addEventListener(type, handler),

@@ -85,7 +85,7 @@ class MDCSimpleMenu extends MDCComponent {
     return [].slice.call(itemsContainer.querySelectorAll('.mdc-list-item[role]'));
   }
 
-  /** @return {!MDCSimpleMenuFoundation} */
+  /** @override @return {!MDCSimpleMenuFoundation} */
   getDefaultFoundation() {
     return new MDCSimpleMenuFoundation({
       addClass: (className) => this.root_.classList.add(className),

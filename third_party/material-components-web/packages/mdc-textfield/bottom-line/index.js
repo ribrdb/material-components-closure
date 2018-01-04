@@ -42,7 +42,7 @@ class MDCTextFieldBottomLine extends MDCComponent {
   }
 
   /**
-   * @return {!MDCTextFieldBottomLineFoundation}
+   * @override @return {!MDCTextFieldBottomLineFoundation}
    */
   getDefaultFoundation() {
     return new MDCTextFieldBottomLineFoundation(/** @type {!MDCTextFieldBottomLineAdapter} */ (Object.assign({

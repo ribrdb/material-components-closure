@@ -42,7 +42,7 @@ class MDCTextFieldHelperText extends MDCComponent {
   }
 
   /**
-   * @return {!MDCTextFieldHelperTextFoundation}
+   * @override @return {!MDCTextFieldHelperTextFoundation}
    */
   getDefaultFoundation() {
     return new MDCTextFieldHelperTextFoundation(/** @type {!MDCTextFieldHelperTextAdapter} */ (Object.assign({

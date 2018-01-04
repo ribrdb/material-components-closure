@@ -124,12 +124,13 @@ class MDCRadio extends MDCComponent {
     return el;
   }
 
+  /** @inheritDoc */
   destroy() {
     this.ripple_.destroy();
     super.destroy();
   }
 
-  /** @return {!MDCRadioFoundation} */
+  /** @override @return {!MDCRadioFoundation} */
   getDefaultFoundation() {
     return new MDCRadioFoundation({
       addClass: (className) => this.root_.classList.add(className),
