@@ -5,3 +5,4 @@ URL: https://github.com/ribrdb/material-components-web/commit/732d189caa2f450696
 Local Modifications:
  - Processed closure compatible files using scripts/closure-test.sh
  - Pruned unneded files.
+ - Update package.json to only include dependencies for running tests.
