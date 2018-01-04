@@ -1,0 +1,76 @@
+goog.module('mdc.test.unit.helpers.foundation');
+goog.module.declareLegacyNamespace();
+/**
+ * Copyright 2016 Google Inc. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+const {
+  assert,
+} = chai;
+
+// Sanity tests to ensure the following:
+// - Default adapters contain functions
+// - All expected adapter functions are accounted for
+// - Invoking any of the default methods does not throw an error.
+// Every foundation test suite include this verification.
+function verifyDefaultAdapter(FoundationClass, expectedMethods) {
+  const {defaultAdapter} = FoundationClass;
+  const methods = Object.keys(defaultAdapter).filter((k) => typeof defaultAdapter[k] === 'function');
+
+  assert.equal(methods.length, Object.keys(defaultAdapter).length, 'Every adapter key must be a function');
+  if (COMPILED) {
+    assert.equal(methods.length, expectedMethods.length);
+  } else {
+    // Test for equality without requiring that the array be in a specific order
+    assert.deepEqual(methods.slice().sort(), expectedMethods.slice().sort());
+  }
+
+  // Test default methods
+  methods.forEach((m) => assert.doesNotThrow(defaultAdapter[m]));
+}
+
+// Returns an object that intercepts calls to an adapter method used to register event handlers, and adds
+// it to that object where the key is the event name and the value is the function being used. This is the
+// preferred way of testing interaction handlers.
+//
+// ```javascript
+// test('#init adds a click listener which adds a "foo" class', (t) => {
+//   const {foundation, mockAdapter} = setupTest();
+//   const handlers = captureHandlers(mockAdapter.registerInteractionHandler);
+//   foundation.init();
+//   handlers['click'](/* you can pass event info in here */ {type: 'click'});
+//   t.doesNotThrow(() => td.verify(mockAdapter.addClass('foo')));
+//   t.end();
+// });
+// ```
+//
+// Note that `handlerCaptureMethod` _must_ have a signature of `(string, EventListener) => any` in order to
+// be effective.
+/**
+ * @param {function(string, EventListener):*} func
+ * @suppress {checkTypes}
+ */
+function captureHandlers(func) {
+  const {isA} = td.matchers;
+  const handlers = {};
+  td.when(func(isA(String), isA(Function))).thenDo((type, handler) => {
+    handlers[type] = (evtInfo = {}) => handler(Object.assign({type}, evtInfo));
+  });
+  return handlers;
+}
+
+exports = {
+  verifyDefaultAdapter,
+  captureHandlers,
+};
