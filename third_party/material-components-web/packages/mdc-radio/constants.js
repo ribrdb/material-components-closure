@@ -1,7 +1,6 @@
 goog.module('mdc.radio.constants');
 goog.module.declareLegacyNamespace();
 /**
- * @license
  * Copyright 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -24,8 +23,8 @@ const strings = {
 
 /** @enum {string} */
 const cssClasses = {
-  ROOT: 'mdc-radio',
-  DISABLED: 'mdc-radio--disabled',
+  ROOT: goog.getCssName('mdc-radio'),
+  DISABLED: goog.getCssName('mdc-radio--disabled'),
 };
 
 exports = {

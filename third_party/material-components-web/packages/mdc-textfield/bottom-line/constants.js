@@ -1,7 +1,6 @@
 goog.module('mdc.textfield.bottomline.constants');
 goog.module.declareLegacyNamespace();
 /**
- * @license
  * Copyright 2017 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -24,7 +23,7 @@ const strings = {
 
 /** @enum {string} */
 const cssClasses = {
-  BOTTOM_LINE_ACTIVE: 'mdc-text-field__bottom-line--active',
+  BOTTOM_LINE_ACTIVE: goog.getCssName('mdc-text-field__bottom-line--active'),
 };
 
 exports = {

@@ -1,7 +1,6 @@
 goog.module('mdc.base.foundation');
 goog.module.declareLegacyNamespace();
 /**
- * @license
  * Copyright 2016 Google Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,6 +15,11 @@ goog.module.declareLegacyNamespace();
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+const {
+  header,
+} = goog.require('mdc.base.header');
+
+header();
 
 /**
  * @template A

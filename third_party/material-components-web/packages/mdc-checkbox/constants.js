@@ -1,7 +1,6 @@
 goog.module('mdc.checkbox.constants');
 goog.module.declareLegacyNamespace();
 /**
- * @license
  * Copyright 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -22,16 +21,16 @@ const ROOT = 'mdc-checkbox';
 
 /** @enum {string} */
 const cssClasses = {
-  UPGRADED: 'mdc-checkbox--upgraded',
-  CHECKED: 'mdc-checkbox--checked',
-  INDETERMINATE: 'mdc-checkbox--indeterminate',
-  DISABLED: 'mdc-checkbox--disabled',
-  ANIM_UNCHECKED_CHECKED: 'mdc-checkbox--anim-unchecked-checked',
-  ANIM_UNCHECKED_INDETERMINATE: 'mdc-checkbox--anim-unchecked-indeterminate',
-  ANIM_CHECKED_UNCHECKED: 'mdc-checkbox--anim-checked-unchecked',
-  ANIM_CHECKED_INDETERMINATE: 'mdc-checkbox--anim-checked-indeterminate',
-  ANIM_INDETERMINATE_CHECKED: 'mdc-checkbox--anim-indeterminate-checked',
-  ANIM_INDETERMINATE_UNCHECKED: 'mdc-checkbox--anim-indeterminate-unchecked',
+  UPGRADED: goog.getCssName('mdc-checkbox--upgraded'),
+  CHECKED: goog.getCssName('mdc-checkbox--checked'),
+  INDETERMINATE: goog.getCssName('mdc-checkbox--indeterminate'),
+  DISABLED: goog.getCssName('mdc-checkbox--disabled'),
+  ANIM_UNCHECKED_CHECKED: goog.getCssName('mdc-checkbox--anim-unchecked-checked'),
+  ANIM_UNCHECKED_INDETERMINATE: goog.getCssName('mdc-checkbox--anim-unchecked-indeterminate'),
+  ANIM_CHECKED_UNCHECKED: goog.getCssName('mdc-checkbox--anim-checked-unchecked'),
+  ANIM_CHECKED_INDETERMINATE: goog.getCssName('mdc-checkbox--anim-checked-indeterminate'),
+  ANIM_INDETERMINATE_CHECKED: goog.getCssName('mdc-checkbox--anim-indeterminate-checked'),
+  ANIM_INDETERMINATE_UNCHECKED: goog.getCssName('mdc-checkbox--anim-indeterminate-unchecked'),
 };
 
 /** @enum {string} */

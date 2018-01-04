@@ -1,7 +1,6 @@
 goog.module('mdc.textfield.constants');
 goog.module.declareLegacyNamespace();
 /**
- * @license
  * Copyright 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -28,12 +27,12 @@ const strings = {
 
 /** @enum {string} */
 const cssClasses = {
-  ROOT: 'mdc-text-field',
-  UPGRADED: 'mdc-text-field--upgraded',
-  DISABLED: 'mdc-text-field--disabled',
-  FOCUSED: 'mdc-text-field--focused',
-  INVALID: 'mdc-text-field--invalid',
-  BOX: 'mdc-text-field--box',
+  ROOT: goog.getCssName('mdc-text-field'),
+  UPGRADED: goog.getCssName('mdc-text-field--upgraded'),
+  DISABLED: goog.getCssName('mdc-text-field--disabled'),
+  FOCUSED: goog.getCssName('mdc-text-field--focused'),
+  INVALID: goog.getCssName('mdc-text-field--invalid'),
+  BOX: goog.getCssName('mdc-text-field--box'),
 };
 
 exports = {

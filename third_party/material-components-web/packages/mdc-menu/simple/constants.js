@@ -1,7 +1,6 @@
 goog.module('mdc.menu.simple.constants');
 goog.module.declareLegacyNamespace();
 /**
- * @license
  * Copyright 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -19,13 +18,13 @@ goog.module.declareLegacyNamespace();
 
 /** @enum {string} */
 const cssClasses = {
-  ROOT: 'mdc-simple-menu',
-  OPEN: 'mdc-simple-menu--open',
-  ANIMATING: 'mdc-simple-menu--animating',
-  TOP_RIGHT: 'mdc-simple-menu--open-from-top-right',
-  BOTTOM_LEFT: 'mdc-simple-menu--open-from-bottom-left',
-  BOTTOM_RIGHT: 'mdc-simple-menu--open-from-bottom-right',
-  LIST_ITEM: 'mdc-list-item',
+  ROOT: goog.getCssName('mdc-simple-menu'),
+  OPEN: goog.getCssName('mdc-simple-menu--open'),
+  ANIMATING: goog.getCssName('mdc-simple-menu--animating'),
+  TOP_RIGHT: goog.getCssName('mdc-simple-menu--open-from-top-right'),
+  BOTTOM_LEFT: goog.getCssName('mdc-simple-menu--open-from-bottom-left'),
+  BOTTOM_RIGHT: goog.getCssName('mdc-simple-menu--open-from-bottom-right'),
+  LIST_ITEM: goog.getCssName('mdc-list-item'),
 };
 
 /** @enum {string} */

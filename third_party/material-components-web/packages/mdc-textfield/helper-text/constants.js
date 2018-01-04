@@ -1,7 +1,6 @@
 goog.module('mdc.textfield.helpertext.constants');
 goog.module.declareLegacyNamespace();
 /**
- * @license
  * Copyright 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -25,8 +24,8 @@ const strings = {
 
 /** @enum {string} */
 const cssClasses = {
-  HELPER_TEXT_PERSISTENT: 'mdc-text-field-helper-text--persistent',
-  HELPER_TEXT_VALIDATION_MSG: 'mdc-text-field-helper-text--validation-msg',
+  HELPER_TEXT_PERSISTENT: goog.getCssName('mdc-text-field-helper-text--persistent'),
+  HELPER_TEXT_VALIDATION_MSG: goog.getCssName('mdc-text-field-helper-text--validation-msg'),
 };
 
 exports = {

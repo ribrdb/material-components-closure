@@ -1,7 +1,6 @@
 goog.module('mdc.formfield.constants');
 goog.module.declareLegacyNamespace();
 /**
- * @license
  * Copyright 2017 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -19,7 +18,7 @@ goog.module.declareLegacyNamespace();
 
 /** @enum {string} */
 const cssClasses = {
-  ROOT: 'mdc-form-field',
+  ROOT: goog.getCssName('mdc-form-field'),
 };
 
 /** @enum {string} */

@@ -1,7 +1,6 @@
 goog.module('mdc.icontoggle.constants');
 goog.module.declareLegacyNamespace();
 /**
- * @license
  * Copyright 2016 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -19,8 +18,8 @@ goog.module.declareLegacyNamespace();
 
 /** @enum {string} */
 const cssClasses = {
-  ROOT: 'mdc-icon-toggle',
-  DISABLED: 'mdc-icon-toggle--disabled',
+  ROOT: goog.getCssName('mdc-icon-toggle'),
+  DISABLED: goog.getCssName('mdc-icon-toggle--disabled'),
 };
 
 /** @enum {string} */
