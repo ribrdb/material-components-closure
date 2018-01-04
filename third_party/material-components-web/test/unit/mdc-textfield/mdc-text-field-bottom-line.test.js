@@ -2,7 +2,9 @@ const {
   assert,
 } = chai;
 
-import {MDCTextFieldBottomLine, MDCTextFieldBottomLineFoundation} from 'goog:mdc.textfield.bottomline';
+import bottomline from 'goog:mdc.textfield.bottomline';
+const MDCTextFieldBottomLine = bottomline.MDCTextFieldBottomLine;
+const MDCTextFieldBottomLineFoundation = bottomline.MDCTextFieldBottomLineFoundation;
 
 const getFixture = () => bel`
   <div class="mdc-textfield__bottom-line"></div>
