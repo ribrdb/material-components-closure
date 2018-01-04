@@ -1,6 +1,6 @@
 Package: Material Components Web
 License: Apache
-URL: https://github.com/ribrdb/material-components-web/commit/bf89a1cf458258d8f0aa0fc7f119d434d0c88270
+URL: https://github.com/ribrdb/material-components-web/commit/5450bc0def1c07a17585ddda805cc6acc4cf11ef
 
 Local Modifications:
  - Processed closure compatible files using scripts/closure-test.sh
